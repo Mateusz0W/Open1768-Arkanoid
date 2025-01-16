@@ -22,7 +22,7 @@ void resetGame(int *paddle_x,int *ball_x,int *ball_y,int bricks[5][10])
 void movePaddle(int dx,int *paddle_x,int *paddle_y)
 {
     clear_paddle(paddle_x,paddle_y);
-	  *paddle_x+=dx;                           
+	*paddle_x+=dx;                           
     if (*paddle_x < 0) 
 			*paddle_x = 0;
     if (*paddle_x > LCD_MAX_X - PADDLE_WIDTH) 
@@ -56,7 +56,7 @@ void updateBall(int *ball_x,int *ball_y,int *paddle_x,int *paddle_y,int bricks[5
     {
         bricks[brick_row][brick_col] = 0;
         ball_dy = -ball_dy;
-			  drawBricks(bricks);
+		drawBricks(bricks);
     }
 
     // Game over condition

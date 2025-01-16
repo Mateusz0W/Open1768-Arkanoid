@@ -120,15 +120,15 @@ void drawBricks(int bricks[5][10])
         {
             if (bricks[i][j] > 0)
             {
-							int color;
-							if(i%2==0)
-								color= j%2 == 0 ? LCDGreen :LCDMagenta;
-							else
-								color = j%2 == 0 ? LCDGinger : LCDPastelBlue;
+				int color;
+				if(i%2==0)
+					color= j%2 == 0 ? LCDGreen :LCDMagenta;
+				else
+					color = j%2 == 0 ? LCDGinger : LCDPastelBlue;
                 drawRectangle(j * BRICK_WIDTH, i * BRICK_HEIGHT, BRICK_WIDTH - 2, BRICK_HEIGHT - 2, color);
             }
-						else
-							 drawRectangle(j * BRICK_WIDTH, i * BRICK_HEIGHT, BRICK_WIDTH - 2, BRICK_HEIGHT - 2, LCDBlack);
+			else
+				drawRectangle(j * BRICK_WIDTH, i * BRICK_HEIGHT, BRICK_WIDTH - 2, BRICK_HEIGHT - 2, LCDBlack);
         }
     }
 }
